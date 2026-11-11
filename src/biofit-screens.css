@@ -2209,3 +2209,147 @@ button.mini-grid-btn.is-active {
 .profile-preset-btn.is-selected img {
     border-color: #7cfc00;
 }
+
+/* Compact Tutorial Card & Step Checklist (No Empty Space) */
+.app-screen-biofit .tutorial-card {
+    flex: 0 1 auto !important;
+    padding: 14px 16px !important;
+    gap: 6px;
+    border: 1px solid rgba(0, 198, 255, 0.28);
+    background: linear-gradient(165deg, rgba(20, 29, 42, 0.96) 0%, rgba(13, 20, 30, 0.98) 100%);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.app-screen-biofit .tutorial-card h3 {
+    margin: 2px 0 2px !important;
+    font-size: 18px !important;
+}
+
+.app-screen-biofit .tutorial-card p {
+    margin: 0 0 6px !important;
+    font-size: 11.5px !important;
+    line-height: 1.38 !important;
+}
+
+.tutorial-steps-mini-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 2px 0 6px;
+}
+
+.tutorial-step-mini-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+    color: #b4c8d8;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tutorial-step-mini-item:hover {
+    border-color: rgba(0, 198, 255, 0.4);
+    background: rgba(0, 198, 255, 0.08);
+}
+
+.tutorial-step-mini-item.is-current {
+    border-color: rgba(124, 252, 0, 0.55);
+    background: linear-gradient(90deg, rgba(0, 198, 255, 0.14), rgba(124, 252, 0, 0.14));
+    color: #fff;
+    box-shadow: 0 0 12px rgba(124, 252, 0, 0.15);
+}
+
+.tutorial-step-mini-item.is-done {
+    border-color: rgba(0, 198, 255, 0.25);
+    opacity: 0.85;
+}
+
+.step-mini-num {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #93a8ba;
+    font-size: 10px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tutorial-step-mini-item.is-current .step-mini-num {
+    background: linear-gradient(135deg, #00c6ff, #7cfc00);
+    color: #0a1118;
+    box-shadow: 0 0 8px rgba(124, 252, 0, 0.5);
+}
+
+.tutorial-step-mini-item.is-done .step-mini-num {
+    background: rgba(124, 252, 0, 0.2);
+    color: #7cfc00;
+}
+
+.step-mini-text {
+    min-width: 0;
+    flex: 1;
+}
+
+.step-mini-text strong {
+    display: block;
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #e6f4ff;
+}
+
+.step-mini-text span {
+    display: block;
+    font-size: 9.5px;
+    color: #8fa0b0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tutorial-meta-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.tutorial-meta-pill {
+    padding: 6px 8px;
+    border-radius: 10px;
+    background: rgba(10, 16, 24, 0.75);
+    border: 1px solid rgba(0, 198, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.tutorial-meta-pill span {
+    font-size: 9px;
+    color: #74dec3;
+    font-weight: 600;
+}
+
+.tutorial-meta-pill strong {
+    font-size: 10px;
+    color: #fff;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.app-screen-biofit .tutorial-actions {
+    margin-top: 6px !important;
+    padding-top: 8px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}

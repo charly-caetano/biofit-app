@@ -1469,6 +1469,35 @@ function BiofitApp({ onClose, initialView = 'dashboard', initialCategory = 'pern
           </div>
           <h3>{currentTutorial.title}</h3>
           <p>{currentTutorial.body}</p>
+
+          <div className="tutorial-steps-mini-list">
+            {tutorialSteps.map((sItem, sIdx) => (
+              <button
+                key={sItem.title}
+                type="button"
+                className={`tutorial-step-mini-item ${sIdx === step ? 'is-current' : ''} ${sIdx < step ? 'is-done' : ''}`}
+                onClick={() => setStep(sIdx)}
+              >
+                <span className="step-mini-num">{sIdx < step ? '✓' : sIdx + 1}</span>
+                <div className="step-mini-text">
+                  <strong>{sItem.title}</strong>
+                  <span>{sItem.body}</span>
+                </div>
+              </button>
+            ))}
+          </div>
+
+          <div className="tutorial-meta-strip">
+            <div className="tutorial-meta-pill">
+              <span>🏋️ Série & Carga</span>
+              <strong>{activeExercise.repsInfo || activeExercise.equipment}</strong>
+            </div>
+            <div className="tutorial-meta-pill">
+              <span>🫁 Cadência & Respiração</span>
+              <strong>Inspire ao descer · Expire na força</strong>
+            </div>
+          </div>
+
           <div className="tutorial-actions">
             <button
               type="button"
