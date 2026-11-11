@@ -1,0 +1,17 @@
+{
+  "name": "Biofit",
+  "short_name": "Biofit",
+  "description": "Aprenda movimentos de fitness com biologia e biomecânica.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#d2d2d7",
+  "theme_color": "#15b8a6",
+  "icons": [
+    {
+      "src": "/biofit-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
