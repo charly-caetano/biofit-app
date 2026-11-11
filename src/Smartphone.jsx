@@ -1493,8 +1493,8 @@ function BiofitApp({ onClose, initialView = 'dashboard', initialCategory = 'pern
               <strong>{activeExercise.repsInfo || activeExercise.equipment}</strong>
             </div>
             <div className="tutorial-meta-pill">
-              <span>🫁 Cadência & Respiração</span>
-              <strong>Inspire ao descer · Expire na força</strong>
+              <span>🫁 Respiração</span>
+              <strong>Inspire ao descer · Expire ao subir</strong>
             </div>
           </div>
 

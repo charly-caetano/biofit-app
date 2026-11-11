@@ -2213,7 +2213,10 @@ button.mini-grid-btn.is-active {
 /* Compact Tutorial Card & Step Checklist (No Empty Space) */
 .app-screen-biofit .tutorial-card {
     flex: 0 1 auto !important;
-    padding: 14px 16px !important;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 14px 14px !important;
     gap: 6px;
     border: 1px solid rgba(0, 198, 255, 0.28);
     background: linear-gradient(165deg, rgba(20, 29, 42, 0.96) 0%, rgba(13, 20, 30, 0.98) 100%);
@@ -2318,12 +2321,16 @@ button.mini-grid-btn.is-active {
 
 .tutorial-meta-strip {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 6px;
+    width: 100%;
+    box-sizing: border-box;
     margin-bottom: 4px;
 }
 
 .tutorial-meta-pill {
+    min-width: 0;
+    overflow: hidden;
     padding: 6px 8px;
     border-radius: 10px;
     background: rgba(10, 16, 24, 0.75);
@@ -2340,12 +2347,12 @@ button.mini-grid-btn.is-active {
 }
 
 .tutorial-meta-pill strong {
-    font-size: 10px;
+    font-size: 9.5px;
     color: #fff;
     font-weight: 700;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    line-height: 1.25;
+    white-space: normal;
+    word-break: break-word;
 }
 
 .app-screen-biofit .tutorial-actions {
