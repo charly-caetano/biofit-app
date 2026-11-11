@@ -692,7 +692,7 @@ function BiofitBottomNav({ currentView, setView, onClose }) {
   }
 
   return (
-    <>
+    <div className="biofit-bottom-dock">
       <div className="biofit-bottom-nav">
         <button
           type="button"
@@ -769,7 +769,7 @@ function BiofitBottomNav({ currentView, setView, onClose }) {
           aria-label="Voltar ao ecrã inicial do telefone"
         />
       </div>
-    </>
+    </div>
   )
 }
 

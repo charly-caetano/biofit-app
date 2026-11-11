@@ -1829,9 +1829,24 @@ button.mini-grid-btn.is-active {
 }
 
 /* Bottom Navigation Bar */
-.biofit-bottom-nav {
+.app-screen.app-screen-biofit {
+    padding-bottom: 0 !important;
+}
+
+.biofit-bottom-dock {
     position: sticky;
     bottom: 0;
+    z-index: 30;
+    width: 100%;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    background: rgba(10, 16, 24, 0.98);
+    border-radius: 22px 22px 0 0;
+}
+
+.biofit-bottom-nav {
+    position: relative;
     z-index: 20;
     width: 100%;
     display: grid;
@@ -1843,7 +1858,6 @@ button.mini-grid-btn.is-active {
     -webkit-backdrop-filter: blur(20px);
     border-top: 1px solid rgba(0, 198, 255, 0.16);
     border-radius: 22px 22px 0 0;
-    margin-top: auto;
     box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(124, 252, 0, 0.12);
 }
 
@@ -2359,4 +2373,65 @@ button.mini-grid-btn.is-active {
     margin-top: 6px !important;
     padding-top: 8px !important;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ── FULL SCREEN ON REAL SMARTPHONES & INSTALLED PWA ──────── */
+@media (max-width: 640px), (display-mode: standalone) {
+    html,
+    body,
+    #root {
+        width: 100vw !important;
+        height: 100dvh !important;
+        min-height: 100dvh !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #0d1117 !important;
+        overflow: hidden !important;
+    }
+
+    .Smartphone {
+        width: 100vw !important;
+        height: 100dvh !important;
+        min-height: 100dvh !important;
+        aspect-ratio: unset !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: #0d1117 !important;
+    }
+
+    .SmartphoneDevice {
+        width: 100vw !important;
+        height: 100dvh !important;
+        min-height: 100dvh !important;
+        aspect-ratio: unset !important;
+        border-radius: 0 !important;
+        outline: none !important;
+        box-shadow: none !important;
+        background: #0d1117 !important;
+    }
+
+    .PowerButton,
+    .VolumeUp,
+    .VolumeDown {
+        display: none !important;
+    }
+
+    .screen-shell {
+        width: 100vw !important;
+        height: 100dvh !important;
+        border-radius: 0 !important;
+    }
+
+    .screen-canvas,
+    .app-screen {
+        border-radius: 0 !important;
+    }
+
+    .app-screen {
+        padding: 16px 16px 0 !important;
+    }
+
+    .phone-home-indicator-wrap {
+        padding-bottom: env(safe-area-inset-bottom, 6px);
+    }
 }
